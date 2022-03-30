@@ -1,4 +1,5 @@
 from src.models.car import Car, Category, Fuel
+from src.models.address import Address
 
 ad_hoc_cars_list: list[Car] = [
     Car(
@@ -8,7 +9,7 @@ ad_hoc_cars_list: list[Car] = [
         year=2015,
         category=Category.standard,
         fuel=Fuel.gasoline,
-        city='Goiânia'
+        value_in_cents=7500000
     ),
     Car(
         code=2,
@@ -17,7 +18,6 @@ ad_hoc_cars_list: list[Car] = [
         year=2019,
         category=Category.standard,
         fuel=Fuel.gasoline,
-        city='Anápolis'
     ),
     Car(
         code=3,
@@ -26,7 +26,6 @@ ad_hoc_cars_list: list[Car] = [
         year=2018,
         category=Category.standard,
         fuel=Fuel.gasoline,
-        city='Goiânia'
     ),
     Car(
         code=4,
@@ -35,7 +34,6 @@ ad_hoc_cars_list: list[Car] = [
         year=2015,
         category=Category.standard,
         fuel=Fuel.flex,
-        city='Goiânia'
     ),
     Car(
         code=5,
@@ -44,6 +42,9 @@ ad_hoc_cars_list: list[Car] = [
         year=2019,
         category=Category.sport,
         fuel=Fuel.gasoline,
-        city='Brasília'
+        seats=2,
+        value_in_cents=40000000
     )
 ]
+
+ad_hoc_cars_list[0].accessories.update(['Freio ABS', 'Teto solar'])
